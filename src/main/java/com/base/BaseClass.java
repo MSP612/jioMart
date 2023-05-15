@@ -1,24 +1,22 @@
 package com.base;
 
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public static WebDriver driver;
 	public static Properties prop = new Properties();
 	public static FileReader fr;
-	public SoftAssert softassert = new SoftAssert();
+	public static SoftAssert softassert = new SoftAssert();
 	
-	@BeforeTest
-	public void launchApp() throws IOException {
+	@BeforeMethod
+	public void launchApp() throws Exception{
 		String loc = System.getProperty("user.dir")+"\\Configuration\\Config.properties";
 		fr = new FileReader(loc);
 		prop.load(fr);
@@ -28,16 +26,16 @@ public class BaseClass {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			driver.get(url);
 		}
 		else {
 			System.out.println("Value of browser in Config.properties is not correct");
 		}
-		
 	}
 	
-	@AfterTest
-	public void closeApp() {
+	@AfterMethod
+	public void closeApp(){
 		driver.close();
 		System.out.println("Teardown Successfull");
 		softassert.assertAll();
