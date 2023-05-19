@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.action.ActionClass;
 
-public class HomePage extends ActionClass{
+public class HomePage_TopBanner extends ActionClass{
 	@FindBy(xpath = "//div[contains(@class,'header-main-logo')]/*[contains(@class,'jm-heading-base')]")
 	private WebElement logo;	
 	@FindBy(xpath = "//span[@id = 'sign_in_text']")
@@ -17,7 +17,7 @@ public class HomePage extends ActionClass{
 	private WebElement searchbox;
 	
 	
-	public HomePage(WebDriver rdriver){
+	public HomePage_TopBanner(WebDriver rdriver){
 		PageFactory.initElements(rdriver, this);
 	}
 

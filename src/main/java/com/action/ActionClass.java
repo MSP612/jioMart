@@ -2,13 +2,9 @@ package com.action;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import com.base.BaseClass;
-
-import io.reactivex.rxjava3.functions.Action;
 
 public class ActionClass extends BaseClass{
 	public static Actions action = new Actions(driver);
@@ -37,7 +33,7 @@ public class ActionClass extends BaseClass{
 	}
 	
 	/**
-	 * @param elementsList = Accepts List of Webelemnts
+	 * @param elementsList = Accepts List of WebElements
 	 * @return List of String which we get upon getText()
 	 */
 	public static ArrayList<String> stringList(List<WebElement> elementsList){

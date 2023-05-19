@@ -4,13 +4,13 @@ import org.testng.annotations.Test;
 
 import com.action.ActionClass;
 import com.base.BaseClass;
-import com.pageObjects.HomePage;
+import com.pageObjects.HomePage_TopBanner;
 
-public class test_homepage extends BaseClass{
+public class test_homepage_topBanner extends BaseClass{
 	
 	@Test
 	public void test_Homepage(){
-		HomePage homepage = new HomePage(driver);
+		HomePage_TopBanner homepage = new HomePage_TopBanner(driver);
 		homepage.verify("logo", "exist");
 		String search_val = "LED TV";
 		homepage.search(search_val);

@@ -1,6 +1,7 @@
 package com.base;
 
 import java.io.FileReader;
+import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,18 +27,23 @@ public class BaseClass {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			System.out.println("Google Chrome Launched");
 			driver.manage().window().maximize();
+			System.out.println("Google Chrome maximised");
 			driver.get(url);
+			System.out.println("Accessed URL provided in config.properties file and Auto Logged in");
+			Thread.sleep(Duration.ofSeconds(2));
 		}
 		else {
 			System.out.println("Value of browser in Config.properties is not correct");
 		}
 	}
 	
+	
 	@AfterMethod
 	public void closeApp(){
-		driver.close();
-		System.out.println("Teardown Successfull");
+		driver.quit();
+		System.out.println("Google chrome closed Successfull");
 		softassert.assertAll();
 	}
 }
