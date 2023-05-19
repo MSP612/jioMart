@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.base.BaseClass;
 
 public class ActionClass extends BaseClass{
-	public static Actions action = new Actions(driver);
+	public static Actions action;
 	
 	/**
 	 * @param object value should be By.xpath("string xpath")
@@ -45,6 +45,7 @@ public class ActionClass extends BaseClass{
 	}
 
 	public static void mouseHover(WebElement element) {
-		 action.moveToElement(element).perform();
+		action = new Actions(driver);
+		action.moveToElement(element).perform();
 	}
 }
