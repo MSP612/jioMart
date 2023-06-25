@@ -8,7 +8,7 @@ import com.pageObjects.HomePage_TopBanner;
 
 public class test_homepage_topBanner extends BaseClass{
 	
-	@Test
+	@Test(priority = 3)
 	public void test_Homepage(){
 		HomePage_TopBanner homepage = new HomePage_TopBanner(driver);
 		homepage.verify("logo", "exist");

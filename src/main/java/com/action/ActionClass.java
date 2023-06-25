@@ -1,7 +1,14 @@
 package com.action;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import com.base.BaseClass;
@@ -47,5 +54,12 @@ public class ActionClass extends BaseClass{
 	public static void mouseHover(WebElement element) {
 		action = new Actions(driver);
 		action.moveToElement(element).perform();
+	}
+	
+	public static void scrnShot() throws IOException {
+		File ss = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		DateTimeFormatter dt = DateTimeFormatter.ofPattern("ddmmyyyy_hhmmss");
+		String fileName = "screenshot"+dt;
+		FileUtils.copyFile(ss, new File(System.getProperty("user.dir")+"/TestData/Screenshots/"+fileName+".png"));
 	}
 }

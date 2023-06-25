@@ -4,29 +4,34 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.pageObjects.HomePage_MidBanner;
 
-public class test_homepage_MidBanner extends BaseClass{
-	
+public class test_homepage_MidBanner extends BaseClass {
+
 	@Test(priority = 1)
-	public void test_HomePageBanner_Top_Beauty() {
+	public void test_HomeImprovement_Beauty() {
 		HomePage_MidBanner bannerTop = new HomePage_MidBanner(driver);
-		for (String element : bannerTop.fetchList("home improvement")) {
+		for (String element : bannerTop.fetchList("Top Banner")) {
 			System.out.println(element);
-		}
-		System.out.println("----------------------\n");
-		for (String element : bannerTop.fetchList("Beauty")) {
-			System.out.println(element);
-		}
+			System.out.println("----------------------\n");
+			for (String subElement : bannerTop.fetchList(element)) {
+				System.out.println(subElement);
+			}
+			System.out.println("----------------------\n");
+			}
 	}
-	
+
 	@Test(priority = 2)
-	public void test_HomePageBanner_Fashion_HomeKitchen(){
+	public void test_top_Fashion_HomeKitchen() {
 		HomePage_MidBanner bannerFashion = new HomePage_MidBanner(driver);
-		for (String element : bannerFashion.fetchList("Top")) {
+		System.out.println("-------------All Items---------\n");
+		
+		for (String element : bannerFashion.fetchList("Top Banner")) {
 			System.out.println(element);
-		}
-		System.out.println("----------------------\n");
-		for (String element : bannerFashion.fetchList("fashion")) {
-			System.out.println(element);
-		}
+			System.out.println("----------------------\n");
+			for (String subElement : bannerFashion.fetchList(element)) {
+				System.out.println(subElement);
+			}
+			System.out.println("----------------------\n");
+			}
+		System.out.println("-------------All Items---------\n");
 	}
 }

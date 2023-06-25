@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-15T16:10:36 IST" name="Default suite" finished-at="2023-05-15T16:10:39 IST" duration-ms="3399">
+  <suite started-at="2023-06-23T11:51:58 IST" name="Suite" finished-at="2023-06-23T11:52:36 IST" duration-ms="38141">
     <groups>
     </groups>
-    <test started-at="2023-05-15T16:10:36 IST" name="Default test" finished-at="2023-05-15T16:10:39 IST" duration-ms="3399">
-      <class name="com.testcases.test_homepage_banner">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.testcases.test_homepage_banner@28eaa59a]" started-at="2023-05-15T16:10:36 IST" name="launchApp" finished-at="2023-05-15T16:10:38 IST" duration-ms="2733" status="PASS">
+    <test started-at="2023-06-23T11:51:58 IST" name="Test1" finished-at="2023-06-23T11:52:36 IST" duration-ms="38141">
+      <class name="com.testcases.test_homepage_topBanner">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.testcases.test_homepage_topBanner@54bff557]" started-at="2023-06-23T11:52:23 IST" name="launchApp" finished-at="2023-06-23T11:52:29 IST" duration-ms="5288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="test_HomePageBanner()[pri:0, instance:com.testcases.test_homepage_banner@28eaa59a]" started-at="2023-05-15T16:10:38 IST" name="test_HomePageBanner" finished-at="2023-05-15T16:10:39 IST" duration-ms="515" status="PASS">
+        <test-method signature="test_Homepage()[pri:3, instance:com.testcases.test_homepage_topBanner@54bff557]" started-at="2023-06-23T11:52:29 IST" name="test_Homepage" finished-at="2023-06-23T11:52:29 IST" duration-ms="722" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_HomePageBanner -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.testcases.test_homepage_banner@28eaa59a]" started-at="2023-05-15T16:10:39 IST" name="closeApp" finished-at="2023-05-15T16:10:39 IST" duration-ms="116" status="PASS">
+        </test-method> <!-- test_Homepage -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.testcases.test_homepage_topBanner@54bff557]" started-at="2023-06-23T11:52:29 IST" name="closeApp" finished-at="2023-06-23T11:52:30 IST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- com.testcases.test_homepage_banner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.testcases.test_homepage_topBanner -->
+      <class name="com.testcases.test_homepage_groceries">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.testcases.test_homepage_groceries@593aaf41]" started-at="2023-06-23T11:52:30 IST" name="launchApp" finished-at="2023-06-23T11:52:36 IST" duration-ms="6308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="test_Groceries_FruitsVegetables()[pri:0, instance:com.testcases.test_homepage_groceries@593aaf41]" started-at="2023-06-23T11:52:36 IST" name="test_Groceries_FruitsVegetables" finished-at="2023-06-23T11:52:36 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Groceries_FruitsVegetables -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.testcases.test_homepage_groceries@593aaf41]" started-at="2023-06-23T11:52:36 IST" name="closeApp" finished-at="2023-06-23T11:52:36 IST" duration-ms="331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.testcases.test_homepage_groceries -->
+      <class name="com.testcases.test_homepage_MidBanner">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.testcases.test_homepage_MidBanner@2a54a73f]" started-at="2023-06-23T11:51:58 IST" name="launchApp" finished-at="2023-06-23T11:52:08 IST" duration-ms="9648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="test_HomeImprovement_Beauty()[pri:1, instance:com.testcases.test_homepage_MidBanner@2a54a73f]" started-at="2023-06-23T11:52:08 IST" name="test_HomeImprovement_Beauty" finished-at="2023-06-23T11:52:12 IST" duration-ms="4452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_HomeImprovement_Beauty -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.testcases.test_homepage_MidBanner@2a54a73f]" started-at="2023-06-23T11:52:12 IST" name="closeApp" finished-at="2023-06-23T11:52:13 IST" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.testcases.test_homepage_MidBanner@2a54a73f]" started-at="2023-06-23T11:52:13 IST" name="launchApp" finished-at="2023-06-23T11:52:19 IST" duration-ms="6461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="test_top_Fashion_HomeKitchen()[pri:2, instance:com.testcases.test_homepage_MidBanner@2a54a73f]" started-at="2023-06-23T11:52:19 IST" name="test_top_Fashion_HomeKitchen" finished-at="2023-06-23T11:52:23 IST" duration-ms="3873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_top_Fashion_HomeKitchen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.testcases.test_homepage_MidBanner@2a54a73f]" started-at="2023-06-23T11:52:23 IST" name="closeApp" finished-at="2023-06-23T11:52:23 IST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.testcases.test_homepage_MidBanner -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
 </testng-results>
